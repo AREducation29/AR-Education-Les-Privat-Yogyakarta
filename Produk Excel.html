@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AR Education — Pricelist Les Excel Privat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --brand:#1e3a8a; --accent:#f59e0b; }
+    body { font-family: 'Poppins', sans-serif; }
+    .card { transition: all .25s; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+    .seg-toggle { display:inline-flex; border-radius:9999px; background:#e5e7eb; padding:.25rem; border:1px solid #d1d5db; }
+    .seg-toggle button { padding:.375rem .75rem; border-radius:9999px; font-size:.875rem; font-weight:600; color:#4b5563; }
+    .seg-toggle button.active { background:var(--brand); color:#fff; }
+    .shine { position:relative; overflow:hidden; }
+    .shine:after { content:""; position:absolute; inset:-200%; background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.35) 50%,transparent 60%); transform:translateX(-100%); }
+    .shine:hover:after { animation:shine 1.2s forwards; }
+    @keyframes shine { to { transform:translateX(100%); } }
+  .caret{display:inline-block;width:2px;height:1.1em;background:var(--accent);margin-left:4px;animation:blink 1s steps(1,end) infinite}
+@keyframes blink{50%{opacity:0}}
+</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-[var(--brand)]">AR Education</h1>
+      <a href="#daftar" class="px-4 py-2 rounded-xl bg-[var(--brand)] text-white font-semibold">Daftar Sekarang</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-4xl font-extrabold text-[var(--brand)] leading-tight">Les Excel Privat<br> Basic • Intermediate • Advance</h2>
+      <div class="mt-3 text-2xl md:text-3xl font-extrabold text-[var(--brand)]">
+        Belajar Excel yang
+        <span class="underline decoration-[var(--accent)] decoration-4 underline-offset-4">
+          <span id="typingTarget">langsung kepakai</span>
+          <span class="caret align-middle"></span>
+        </span>
+      </div>
+      <p class="mt-4 text-lg text-gray-600">Durasi fleksibel 60 menit atau 90 menit. Pilih paket sesuai kebutuhanmu, belajar langsung 1-on-1 dengan mentor berpengalaman.</p>
+      <div class="mt-6 flex gap-4">
+        <a href="#pricing" class="px-5 py-3 rounded-2xl bg-[var(--brand)] text-white font-semibold shine">Lihat Harga</a>
+        <a href="#benefit" class="px-5 py-3 rounded-2xl bg-white text-[var(--brand)] font-semibold border">Kenapa AR?</a>
+      </div>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow card">
+      <h3 class="font-bold text-gray-900">Preview Harga</h3>
+      <div class="mt-3 flex items-center gap-3">
+        <div class="seg-toggle">
+          <button id="heroDur60" class="active" data-value="60">60 menit</button>
+          <button id="heroDur90" data-value="90">90 menit</button>
+        </div>
+        <span class="text-xs text-gray-500">90 menit = +25%</span>
+      </div>
+      <p class="mt-4 text-2xl font-extrabold text-[var(--brand)]"><span id="pricePreview">Rp75.000</span> <span class="text-sm text-gray-500">/sesi</span></p>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefit" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-[var(--brand)] text-center">Kenapa pilih AR Education?</h2>
+      <p class="text-center text-gray-600 mt-2">Bukan sekadar hafal rumus. Kamu akan langsung praktek di kasus nyata.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="card bg-white p-6 rounded-2xl border">
+          <h3 class="font-semibold text-gray-900">Kurikulum adaptif</h3>
+          <p class="mt-2 text-sm text-gray-600">Materi menyesuaikan target: karier admin, UMKM, atau akademik.</p>
+        </div>
+        <div class="card bg-white p-6 rounded-2xl border">
+          <h3 class="font-semibold text-gray-900">Belajar by project</h3>
+          <p class="mt-2 text-sm text-gray-600">Setiap sesi ada tugas mini berbasis case nyata.</p>
+        </div>
+        <div class="card bg-white p-6 rounded-2xl border">
+          <h3 class="font-semibold text-gray-900">Hasil nyata</h3>
+          <p class="mt-2 text-sm text-gray-600">Bawa pulang template & dashboard siap pakai.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Pricing -->
+  <section id="pricing" class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-3xl font-bold text-[var(--brand)]">Daftar Harga</h2>
+        <div class="seg-toggle">
+          <button id="prDur60" class="active" data-value="60">60 menit</button>
+          <button id="prDur90" data-value="90">90 menit</button>
+        </div>
+      </div>
+
+      <!-- 60 MIN -->
+      <div id="price-60" class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Basic -->
+        <div class="card bg-white rounded-2xl border p-6 shine">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-gray-900">Basic</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-green-50 text-green-700 border">Ramah Pemula</span>
+          </div>
+          <p class="mt-2 text-3xl font-extrabold text-[var(--brand)]">Rp75.000<span class="text-sm text-gray-500">/sesi</span></p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>• Dasar Excel, formula inti</li>
+            <li>• Tabel & validasi data</li>
+            <li>• 1 proyek mini</li>
+          </ul>
+          <hr class="my-4"/>
+          <p class="text-sm text-gray-500">Paket hemat bulanan</p>
+          <ul class="mt-2 text-sm space-y-1">
+            <li><b>4 sesi</b> — Rp300.000</li>
+            <li><b>8 sesi</b> — Rp582.000 <span class="text-green-600">(hemat 3%)</span></li>
+            <li><b>12 sesi</b> — Rp837.000 <span class="text-green-600">(hemat 7%)</span></li>
+            <li><b>20 sesi</b> — Rp1.350.000 <span class="text-green-600">(hemat 10%)</span></li>
+          </ul>
+          <a href="#daftar" class="take-btn mt-5 w-full inline-flex justify-center px-4 py-2.5 rounded-xl bg-[var(--brand)] text-white font-semibold" data-level="Basic">Ambil Paket</a>
+        </div>
+        <!-- Intermediate -->
+        <div class="card bg-white rounded-2xl border p-6 relative">
+          <div class="absolute -top-3 right-4 px-3 py-1 text-xs rounded-full bg-[var(--accent)] text-white shadow">Terlaris</div>
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-gray-900">Intermediate</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-blue-50 text-blue-700 border">Naik Level</span>
+          </div>
+          <p class="mt-2 text-3xl font-extrabold text-[var(--brand)]">Rp100.000<span class="text-sm text-gray-500">/sesi</span></p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>• Pivot, chart, conditional formatting</li>
+            <li>• Dashboard mini</li>
+            <li>• 2 proyek mini</li>
+          </ul>
+          <hr class="my-4"/>
+          <p class="text-sm text-gray-500">Paket hemat bulanan</p>
+          <ul class="mt-2 text-sm space-y-1">
+            <li><b>4 sesi</b> — Rp400.000</li>
+            <li><b>8 sesi</b> — Rp776.000 <span class="text-green-600">(hemat 3%)</span></li>
+            <li><b>12 sesi</b> — Rp1.116.000 <span class="text-green-600">(hemat 7%)</span></li>
+            <li><b>20 sesi</b> — Rp1.800.000 <span class="text-green-600">(hemat 10%)</span></li>
+          </ul>
+          <a href="#daftar" class="take-btn mt-5 w-full inline-flex justify-center px-4 py-2.5 rounded-xl bg-[var(--brand)] text-white font-semibold" data-level="Intermediate">Ambil Paket</a>
+        </div>
+        <!-- Advance -->
+        <div class="card bg-white rounded-2xl border p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-gray-900">Advance</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-purple-50 text-purple-700 border">Profesional</span>
+          </div>
+          <p class="mt-2 text-3xl font-extrabold text-[var(--brand)]">Rp150.000<span class="text-sm text-gray-500">/sesi</span></p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>• PowerQuery dasar & automasi</li>
+            <li>• Google Apps Script intro</li>
+            <li>• 3 proyek mini</li>
+          </ul>
+          <hr class="my-4"/>
+          <p class="text-sm text-gray-500">Paket hemat bulanan</p>
+          <ul class="mt-2 text-sm space-y-1">
+            <li><b>4 sesi</b> — Rp600.000</li>
+            <li><b>8 sesi</b> — Rp1.164.000 <span class="text-green-600">(hemat 3%)</span></li>
+            <li><b>12 sesi</b> — Rp1.674.000 <span class="text-green-600">(hemat 7%)</span></li>
+            <li><b>20 sesi</b> — Rp2.700.000 <span class="text-green-600">(hemat 10%)</span></li>
+          </ul>
+          <a href="#daftar" class="take-btn mt-5 w-full inline-flex justify-center px-4 py-2.5 rounded-xl bg-[var(--brand)] text-white font-semibold" data-level="Advance">Ambil Paket</a>
+        </div>
+      </div>
+
+      <!-- 90 MIN (125%) -->
+      <div id="price-90" class="hidden mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Basic -->
+        <div class="card bg-white rounded-2xl border p-6 shine">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-gray-900">Basic — 90 Menit</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-green-50 text-green-700 border">Ramah Pemula</span>
+          </div>
+          <p class="mt-2 text-3xl font-extrabold text-[var(--brand)]">Rp93.750<span class="text-sm text-gray-500">/sesi</span></p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>• Dasar Excel, formula inti</li>
+            <li>• Tabel & validasi data</li>
+            <li>• 1 proyek mini</li>
+          </ul>
+          <hr class="my-4"/>
+          <p class="text-sm text-gray-500">Paket hemat bulanan</p>
+          <ul class="mt-2 text-sm space-y-1">
+            <li><b>4 sesi</b> — Rp375.000</li>
+            <li><b>8 sesi</b> — Rp727.500 <span class="text-green-600">(hemat 3%)</span></li>
+            <li><b>12 sesi</b> — Rp1.046.250 <span class="text-green-600">(hemat 7%)</span></li>
+            <li><b>20 sesi</b> — Rp1.687.500 <span class="text-green-600">(hemat 10%)</span></li>
+          </ul>
+          <a href="#daftar" class="take-btn mt-5 w-full inline-flex justify-center px-4 py-2.5 rounded-xl bg-[var(--brand)] text-white font-semibold" data-level="Basic">Ambil Paket</a>
+        </div>
+        <!-- Intermediate -->
+        <div class="card bg-white rounded-2xl border p-6 relative">
+          <div class="absolute -top-3 right-4 px-3 py-1 text-xs rounded-full bg-[var(--accent)] text-white shadow">Terlaris</div>
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-gray-900">Intermediate — 90 Menit</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-blue-50 text-blue-700 border">Naik Level</span>
+          </div>
+          <p class="mt-2 text-3xl font-extrabold text-[var(--brand)]">Rp125.000<span class="text-sm text-gray-500">/sesi</span></p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>• Pivot, chart, conditional formatting</li>
+            <li>• Dashboard mini</li>
+            <li>• 2 proyek mini</li>
+          </ul>
+          <hr class="my-4"/>
+          <p class="text-sm text-gray-500">Paket hemat bulanan</p>
+          <ul class="mt-2 text-sm space-y-1">
+            <li><b>4 sesi</b> — Rp500.000</li>
+            <li><b>8 sesi</b> — Rp970.000 <span class="text-green-600">(hemat 3%)</span></li>
+            <li><b>12 sesi</b> — Rp1.395.000 <span class="text-green-600">(hemat 7%)</span></li>
+            <li><b>20 sesi</b> — Rp2.250.000 <span class="text-green-600">(hemat 10%)</span></li>
+          </ul>
+          <a href="#daftar" class="take-btn mt-5 w-full inline-flex justify-center px-4 py-2.5 rounded-xl bg-[var(--brand)] text-white font-semibold" data-level="Intermediate">Ambil Paket</a>
+        </div>
+        <!-- Advance -->
+        <div class="card bg-white rounded-2xl border p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-gray-900">Advance — 90 Menit</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-purple-50 text-purple-700 border">Profesional</span>
+          </div>
+          <p class="mt-2 text-3xl font-extrabold text-[var(--brand)]">Rp187.500<span class="text-sm text-gray-500">/sesi</span></p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>• PowerQuery dasar & automasi</li>
+            <li>• Google Apps Script intro</li>
+            <li>• 3 proyek mini</li>
+          </ul>
+          <hr class="my-4"/>
+          <p class="text-sm text-gray-500">Paket hemat bulanan</p>
+          <ul class="mt-2 text-sm space-y-1">
+            <li><b>4 sesi</b> — Rp750.000</li>
+            <li><b>8 sesi</b> — Rp1.455.000 <span class="text-green-600">(hemat 3%)</span></li>
+            <li><b>12 sesi</b> — Rp2.092.500 <span class="text-green-600">(hemat 7%)</span></li>
+            <li><b>20 sesi</b> — Rp3.375.000 <span class="text-green-600">(hemat 10%)</span></li>
+          </ul>
+          <a href="#daftar" class="take-btn mt-5 w-full inline-flex justify-center px-4 py-2.5 rounded-xl bg-[var(--brand)] text-white font-semibold" data-level="Advance">Ambil Paket</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-[var(--brand)]">Apa kata mereka?</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="card bg-white p-6 rounded-2xl border">
+          <p class="text-gray-600">“Dari nggak bisa pivot, sekarang bisa bikin dashboard stok buat toko roti.”</p>
+          <p class="mt-3 font-semibold text-gray-900">— Alumni UMKM</p>
+        </div>
+        <div class="card bg-white p-6 rounded-2xl border">
+          <p class="text-gray-600">“Mentornya sabar, latihan mirip real kerjaan admin. Bener-bener kepake.”</p>
+          <p class="mt-3 font-semibold text-gray-900">— Fresh Graduate</p>
+        </div>
+        <div class="card bg-white p-6 rounded-2xl border">
+          <p class="text-gray-600">“Advance-nya bahas Apps Script juga. Bisa otomatisin laporan.”</p>
+          <p class="mt-3 font-semibold text-gray-900">— Staf Operasional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- CTA + Order Form -->
+  <section id="daftar" class="py-16 bg-[var(--brand)] text-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold">Daftar sekarang</h2>
+        <p class="mt-2 text-white/80">Isi nama siswa dulu ya. Setelah itu pilih level, durasi, dan paket. Langsung kirim ke WhatsApp.</p>
+      </div>
+
+      <form id="orderForm" class="bg-white text-gray-800 rounded-2xl border shadow p-6 grid md:grid-cols-2 gap-5">
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-700">Nama siswa</label>
+          <input id="fName" type="text" class="mt-1 w-full rounded-xl border-gray-300 focus:border-[var(--brand)] focus:ring-[var(--brand)]" placeholder="Tulis nama siswa" required />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Level</label>
+          <select id="fLevel" class="mt-1 w-full rounded-xl border-gray-300 focus:border-[var(--brand)] focus:ring-[var(--brand)]">
+            <option>Basic</option>
+            <option>Intermediate</option>
+            <option>Advance</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Durasi</label>
+          <select id="fDuration" class="mt-1 w-full rounded-xl border-gray-300 focus:border-[var(--brand)] focus:ring-[var(--brand)]">
+            <option value="60">60 menit</option>
+            <option value="90">90 menit (125%)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Paket</label>
+          <select id="fPackage" class="mt-1 w-full rounded-xl border-gray-300 focus:border-[var(--brand)] focus:ring-[var(--brand)]">
+            <option value="per">Per sesi</option>
+            <option value="4">4 sesi</option>
+            <option value="8">8 sesi (hemat 3%)</option>
+            <option value="12">12 sesi (hemat 7%)</option>
+            <option value="20">20 sesi (hemat 10%)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Preferensi jadwal</label>
+          <input id="fSchedule" type="text" class="mt-1 w-full rounded-xl border-gray-300 focus:border-[var(--brand)] focus:ring-[var(--brand)]" placeholder="Contoh: Selasa/Jumat 19.00 WIB" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-700">Catatan (opsional)</label>
+          <textarea id="fNote" rows="3" class="mt-1 w-full rounded-xl border-gray-300 focus:border-[var(--brand)] focus:ring-[var(--brand)]" placeholder="Target belajar, kebutuhan khusus, dsb."></textarea>
+        </div>
+
+        <div class="md:col-span-2 flex flex-col md:flex-row items-stretch md:items-center gap-3">
+          <button type="button" onclick="openSummary()" class="flex-1 inline-flex justify-center px-5 py-3 rounded-2xl bg-[var(--brand)] text-white font-semibold shine">Lihat Ringkasan</button>
+          <button type="button" onclick="sendNow()" class="flex-1 inline-flex justify-center px-5 py-3 rounded-2xl bg-emerald-600 text-white font-semibold">Kirim via WhatsApp</button>
+        </div>
+        <p class="md:col-span-2 text-xs text-gray-500">Durasi 90 menit = 125% dari harga 60 menit. Diskon paket: 8 sesi 3%, 12 sesi 7%, 20 sesi 10%.</p>
+      </form>
+    </div>
+
+    <!-- Modal Summary -->
+    <div id="orderModal" class="hidden fixed inset-0 z-50 grid place-items-center p-4 bg-black/40">
+      <div class="bg-white w-full max-w-lg rounded-2xl p-6 shadow-xl">
+        <h3 class="text-lg font-bold text-gray-900">Ringkasan Pesanan</h3>
+        <div id="orderSummary" class="mt-3 text-sm text-gray-700 space-y-1"></div>
+        <div class="mt-5 flex gap-3 justify-end">
+          <button onclick="closeSummary()" class="px-4 py-2 rounded-xl border">Batal</button>
+          <a id="modalSend" href="#" target="_blank" class="px-4 py-2 rounded-xl bg-[var(--brand)] text-white font-semibold">Kirim via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-sm text-gray-500 bg-white">© 2025 AR Education</footer>
+
+  <!-- FAQ Accordion -->
+  <section id="faq" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-[var(--brand)] text-center">FAQ</h2>
+      <div class="mt-8 divide-y rounded-2xl border">
+        <details class="group p-5" open>
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-semibold">Kelas online atau offline?</span>
+            <span class="transition group-open:rotate-180">▾</span>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">Default online (Google Meet/Zoom). Offline bisa by request area Yogyakarta.</p>
+        </details>
+        <details class="group p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-semibold">Apa yang dipelajari di tiap level?</span>
+            <span class="transition group-open:rotate-180">▾</span>
+          </summary>
+          <ul class="mt-3 text-sm text-gray-600 list-disc ml-5">
+            <li><b>Basic:</b> dasar Excel, formula inti, tabel, validasi data.</li>
+            <li><b>Intermediate:</b> pivot, chart, conditional formatting, dashboard mini.</li>
+            <li><b>Advance:</b> PowerQuery dasar, automasi, intro Apps Script.</li>
+          </ul>
+        </details>
+        <details class="group p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-semibold">Ada tugas & rekaman sesi?</span>
+            <span class="transition group-open:rotate-180">▾</span>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">Ya. Tiap sesi ada latihan. Rekaman diberikan bila diminta sebelum kelas.</p>
+        </details>
+        <details class="group p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between">
+            <span class="font-semibold">Bagaimana cara bayar?</span>
+            <span class="transition group-open:rotate-180">▾</span>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600">Transfer bank/e-wallet. Detail akan dikirim setelah konfirmasi via WhatsApp.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  // ===== Hero preview toggle =====
+  const heroDur60=document.getElementById('heroDur60');
+  const heroDur90=document.getElementById('heroDur90');
+  const pricePreview=document.getElementById('pricePreview');
+  heroDur60?.addEventListener('click',()=>{heroDur60.classList.add('active'); heroDur90.classList.remove('active'); pricePreview.textContent='Rp75.000'});
+  heroDur90?.addEventListener('click',()=>{heroDur90.classList.add('active'); heroDur60.classList.remove('active'); pricePreview.textContent='Rp93.750'});
+
+  // ===== Pricing toggle =====
+  const prDur60=document.getElementById('prDur60');
+  const prDur90=document.getElementById('prDur90');
+  const price60=document.getElementById('price-60');
+  const price90=document.getElementById('price-90');
+  prDur60?.addEventListener('click',()=>{prDur60.classList.add('active'); prDur90.classList.remove('active'); price60.classList.remove('hidden'); price90.classList.add('hidden'); syncDuration(60)});
+  prDur90?.addEventListener('click',()=>{prDur90.classList.add('active'); prDur60.classList.remove('active'); price90.classList.remove('hidden'); price60.classList.add('hidden'); syncDuration(90)});
+
+  // ===== Order helpers & validation =====
+  const BASE = { Basic: 75000, Intermediate: 100000, Advance: 150000 };
+  const DISCOUNT = { per: 0, 4: 0, 8: 0.03, 12: 0.07, 20: 0.10 };
+  const WA = 'https://wa.me/6281328013105';
+
+  function currentDuration(){ return price90 && !price90.classList.contains('hidden') ? 90 : 60; }
+  function formatIDR(n){ return new Intl.NumberFormat('id-ID').format(n); }
+  function calcTotal(level, duration, pack){
+    const base = BASE[level] || 0; const per = duration==90 ? Math.round(base*1.25) : base;
+    if(pack==='per') return per; const qty=Number(pack); const gross=per*qty; const disc=DISCOUNT[pack]||0; return Math.round(gross*(1-disc));
+  }
+
+  function ensureName(){
+    const el = document.getElementById('fName');
+    if(!el) return true;
+    const ok = el.value.trim().length>0;
+    if(!ok){
+      el.scrollIntoView({behavior:'smooth', block:'center'});
+      el.focus();
+      el.classList.add('ring-2','ring-red-500');
+      setTimeout(()=>el.classList.remove('ring-2','ring-red-500'), 1200);
+    }
+    return ok;
+  }
+
+  function prefill(level='Basic', duration=currentDuration()){
+    const selLevel=document.getElementById('fLevel');
+    const selDur=document.getElementById('fDuration');
+    if(selLevel) selLevel.value = level;
+    if(selDur) selDur.value = String(duration);
+    document.getElementById('orderForm')?.scrollIntoView({behavior:'smooth'});
+  }
+
+  function buildMessage(){
+    const name = document.getElementById('fName').value.trim();
+    const level = document.getElementById('fLevel').value;
+    const duration = document.getElementById('fDuration').value;
+    const pack = document.getElementById('fPackage').value;
+    const schedule = document.getElementById('fSchedule').value.trim();
+    const note = document.getElementById('fNote').value.trim();
+    const total = calcTotal(level, duration, pack);
+    const per = calcTotal(level, duration, 'per');
+    const labelPack = pack==='per' ? 'Per sesi' : `${pack} sesi`;
+    const lines = [
+      'Halo AR Education, saya ingin daftar Les Excel:',
+      `• Nama siswa: ${name || '-'}`,
+      `• Level: ${level}`,
+      `• Durasi: ${duration} menit`,
+      `• Paket: ${labelPack}`,
+      `• Harga: Rp${formatIDR(total)}${pack!=='per' ? ` (Per sesi Rp${formatIDR(per)})` : ''}`,
+      `• Jadwal: ${schedule || '-'}`,
+      note ? `• Catatan: ${note}` : ''
+    ].filter(Boolean);
+    return lines.join('%0A');
+  }
+
+  function openSummary(){
+    if(!ensureName()) return; // block without name
+    const summary = document.getElementById('orderSummary');
+    const name = document.getElementById('fName').value.trim() || '-';
+    const level = document.getElementById('fLevel').value;
+    const duration = document.getElementById('fDuration').value;
+    const pack = document.getElementById('fPackage').value;
+    const schedule = document.getElementById('fSchedule').value.trim() || '-';
+    const note = document.getElementById('fNote').value.trim();
+    const total = calcTotal(level, duration, pack);
+    const per = calcTotal(level, duration, 'per');
+    summary.innerHTML = `
+      <div><b>Nama siswa</b>: ${name}</div>
+      <div><b>Level</b>: ${level}</div>
+      <div><b>Durasi</b>: ${duration} menit</div>
+      <div><b>Paket</b>: ${pack==='per' ? 'Per sesi' : pack + ' sesi'}</div>
+      <div><b>Harga</b>: Rp${formatIDR(total)}${pack!=='per' ? ` <span class="text-gray-500 text-xs">(Per sesi Rp${formatIDR(per)})</span>` : ''}</div>
+      <div><b>Jadwal</b>: ${schedule}</div>
+      ${note ? `<div><b>Catatan</b>: ${note}</div>` : ''}
+    `;
+    const text = buildMessage();
+    document.getElementById('modalSend').href = `${WA}?text=${text}`;
+    document.getElementById('orderModal').classList.remove('hidden');
+  }
+
+  function closeSummary(){ document.getElementById('orderModal').classList.add('hidden'); }
+
+  function sendNow(){
+    if(!ensureName()) return; // block without name
+    const text = buildMessage();
+    const url = `${WA}?text=${text}`;
+    window.open(url, '_blank');
+  }
+
+  function syncDuration(d){
+    const selDur=document.getElementById('fDuration');
+    if(selDur) selDur.value=String(d);
+  }
+
+  // Attach handlers to all pricing buttons
+  document.querySelectorAll('.take-btn').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      // If no name, auto scroll to name first and block jump
+      if(!ensureName()){
+        e.preventDefault();
+        return;
+      }
+      // With name filled, prefill level & duration, allow jump
+      const level = btn.getAttribute('data-level') || 'Basic';
+      prefill(level, currentDuration());
+    });
+  });
+
+  // ===== Typing Effect =====
+  (function typingEffect(){
+    const el = document.getElementById('typingTarget');
+    if(!el) return;
+    const phrases = [
+      'langsung kepakai',
+      'mudah dipahami',
+      'siap kerja',
+      'berguna untuk UMKM',
+      'cocok untuk tugas sekolah',
+      'bisa otomatisasi Apps Script'
+    ];
+    let i=0, j=0, del=false;
+    const speed={type:60, erase:40, wait:1200};
+    function tick(){
+      const t = phrases[i];
+      if(!del){
+        el.textContent = t.slice(0, ++j);
+        if(j>=t.length){ del=true; return setTimeout(tick, speed.wait); }
+        return setTimeout(tick, speed.type);
+      } else {
+        el.textContent = t.slice(0, --j);
+        if(j<=0){ del=false; i=(i+1)%phrases.length; return setTimeout(tick, speed.type); }
+        return setTimeout(tick, speed.erase);
+      }
+    }
+    tick();
+  })();
+</script>
+</body>
+</html>

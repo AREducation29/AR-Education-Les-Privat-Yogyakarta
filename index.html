@@ -313,21 +313,21 @@
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
     // Typing effect
-    const words = ["hemat", "terukur", "actionable"];
-    const el = document.getElementById('typing');
-    let w = 0, i = 0, deleting = false;
-    function typeLoop(){
-      const word = words[w];
-      if(!deleting){
-        el.textContent = word.slice(0, i++);
-        if(i > word.length){ deleting = true; setTimeout(typeLoop, 900); return; }
-      } else {
-        el.textContent = word.slice(0, i--);
-        if(i < 0){ deleting = false; w = (w + 1) % words.length; }
-      }
-      setTimeout(typeLoop, deleting ? 36 : 56);
-    }
-    typeLoop();
+    // const words = ["hemat", "terukur", "actionable"];
+    // const el = document.getElementById('typing');
+    // let w = 0, i = 0, deleting = false;
+    // function typeLoop(){
+    //   const word = words[w];
+    //   if(!deleting){
+    //     el.textContent = word.slice(0, i++);
+    //     if(i > word.length){ deleting = true; setTimeout(typeLoop, 900); return; }
+    //   } else {
+    //     el.textContent = word.slice(0, i--);
+    //     if(i < 0){ deleting = false; w = (w + 1) % words.length; }
+    //   }
+    //   setTimeout(typeLoop, deleting ? 36 : 56);
+    // }
+    // typeLoop();
   </script>
 </body>
 </html>

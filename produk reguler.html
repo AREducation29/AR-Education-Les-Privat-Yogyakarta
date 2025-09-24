@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produk Reguler — AR Education (Les Privat & Program Belajar)</title>
+  <meta name="description" content="Produk Reguler AR Education: Les Privat SD/SMP/SMA, Kelas Persiapan ASPD & UTBK, Kelas Reguler Matematika, Literasi-Numerasi, dan Program Intensif. Warna biru-putih, SEO friendly, cepat, responsif." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="Produk Reguler — AR Education" />
+  <meta property="og:description" content="Les Privat & Program Reguler: materi relevan, pace fleksibel, hasil nyata. Lokasi: Mantrijeron, Yogyakarta." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { blue: '#0ea5e9' } }
+        }
+      }
+    }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='24' fill='%230ea5e9'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='56' font-family='Arial' fill='white'%3EAR%3C/text%3E%3C/svg%3E"/>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProductCollection",
+    "name": "Produk Reguler AR Education",
+    "brand": { "@type": "Brand", "name": "AR Education" },
+    "provider": { "@type": "Organization", "name": "AR Education", "founder": "Riki Dian Pratama" },
+    "areaServed": "ID",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Les Privat & Kelas Reguler",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Les Privat SD/SMP/SMA", "priceCurrency": "IDR" },
+        { "@type": "Offer", "name": "Kelas Persiapan ASPD/UTBK", "priceCurrency": "IDR" },
+        { "@type": "Offer", "name": "Kelas Reguler Matematika", "priceCurrency": "IDR" },
+        { "@type": "Offer", "name": "Literasi & Numerasi", "priceCurrency": "IDR" }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* Typing caret & reveal animation: mengikuti index */
+    .caret::after{content:"|";margin-left:2px;animation:blink 1s step-start infinite}
+    @keyframes blink{50%{opacity:0}}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.show{opacity:1;transform:translateY(0)}
+    .shadow-soft{box-shadow:0 6px 24px rgba(2,132,199,.08)}
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-brand-blue/20 selection:text-slate-900">
+
+  <!-- Header: konsisten dengan index -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="AR Education">
+          <div class="h-9 w-9 rounded-xl bg-brand-blue/10 grid place-items-center">
+            <span class="text-brand-blue font-bold">AR</span>
+          </div>
+          <div class="leading-tight">
+            <div class="text-lg font-extrabold tracking-tight" style="color:#0ea5e9;">AR Education</div>
+            <div class="text-xs text-slate-500">by Riki Dian Pratama</div>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="Tentang.html" class="hover:text-brand-blue">Tentang</a>
+          <a href="produk excel.html" class="hover:text-brand-blue">Produk Excel</a>
+          <a href="produk data analyst/IT.html" class="hover:text-brand-blue">Produk Data Analyst/IT</a>
+          <a href="produk reguler.html" class="text-brand-blue font-semibold">Produk Reguler</a>
+          <a href="kontak.html" class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-4 py-2 text-white hover:bg-sky-500 transition">
+            Kontak
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M21 12H3"/></svg>
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl p-2 text-slate-700 hover:bg-slate-100" aria-label="Buka menu">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path id="menuBars" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 grid gap-2 text-sm">
+        <a href="Tentang.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Tentang</a>
+        <a href="produk excel.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Produk Excel</a>
+        <a href="produk data analyst/IT.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Produk Data Analyst/IT</a>
+        <a href="produk reguler.html" class="py-2 px-3 rounded-lg bg-brand-blue/10 text-sky-700">Produk Reguler</a>
+        <a href="kontak.html" class="py-2 px-3 rounded-lg bg-brand-blue text-white hover:bg-sky-500 rounded-xl">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-sky-50 to-white pointer-events-none"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+      <div class="grid lg:grid-cols-2 items-center gap-10">
+        <div class="reveal">
+          <span class="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">
+            Produk Reguler • Les Privat & Program Belajar
+          </span>
+          <h1 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+            Belajar yang <span class="text-brand-blue">relevan</span>, pace <span class="text-brand-blue">fleksibel</span>, hasil
+            <span class="caret"><span id="typing" class="text-brand-blue"></span></span>
+          </h1>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+            Fokus ke kebutuhan siswa: konsep inti, latihan terarah, dan evaluasi berkala. Cocok untuk SD—SMP—SMA, persiapan
+            <strong>ASPD</strong> & <strong>UTBK</strong>, serta <strong>kelas reguler matematika</strong> & <strong>literasi-numerasi</strong>.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://wa.me/081328013105?text=Halo%20AR%20Education%2C%20saya%20minat%20Produk%20Reguler%20(les%20privat%2Fkelas%20reguler)%20ya." class="rounded-xl bg-brand-blue px-5 py-3 text-white font-semibold hover:bg-sky-500 transition">Chat WhatsApp</a>
+            <a href="#daftar-program" class="rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-slate-100 transition">Lihat Program</a>
+          </div>
+          <p class="mt-3 text-xs text-slate-500">Lokasi offline: Gg. Lesmana, Mantrijeron, Yogyakarta 55143</p>
+        </div>
+        <div class="reveal">
+          <div class="relative">
+            <div class="absolute -inset-6 bg-gradient-to-tr from-sky-100 to-white blur-2xl rounded-3xl"></div>
+            <div class="relative rounded-3xl border border-sky-100 bg-white shadow-soft p-5">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <!-- Kartu ringkas -->
+                <div class="rounded-2xl border border-slate-200 p-4">
+                  <p class="text-xs font-medium text-sky-700">Level</p>
+                  <p class="text-lg font-bold text-slate-900 mt-1">SD • SMP • SMA</p>
+                  <p class="text-sm text-slate-600 mt-2">Materi kurikulum & penguatan konsep.</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 p-4">
+                  <p class="text-xs font-medium text-sky-700">Mode</p>
+                  <p class="text-lg font-bold text-slate-900 mt-1">Online / Offline</p>
+                  <p class="text-sm text-slate-600 mt-2">Jadwal fleksibel, home-visit/meet online.</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 p-4">
+                  <p class="text-xs font-medium text-sky-700">Durasi</p>
+                  <p class="text-lg font-bold text-slate-900 mt-1">60–90 menit</p>
+                  <p class="text-sm text-slate-600 mt-2">Bisa intensif menjelang ujian.</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 p-4">
+                  <p class="text-xs font-medium text-sky-700">Evaluasi</p>
+                  <p class="text-lg font-bold text-slate-900 mt-1">Progres report</p>
+                  <p class="text-sm text-slate-600 mt-2">Ringkas, objektif, actionable.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+        <div class="rounded-2xl border border-slate-200 p-4">
+          <p class="text-sm font-semibold text-slate-900">UI/UX Modern</p>
+          <p class="text-xs text-slate-600 mt-1">Responsif seperti app native. Cepat & rapi.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-4">
+          <p class="text-sm font-semibold text-slate-900">SEO-Friendly</p>
+          <p class="text-xs text-slate-600 mt-1">Meta & schema terstruktur, copy singkat.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-4">
+          <p class="text-sm font-semibold text-slate-900">Kurikulum Relevan</p>
+          <p class="text-xs text-slate-600 mt-1">Fokus capaian—bukan sekadar materi.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-4">
+          <p class="text-sm font-semibold text-slate-900">Bisa Negosiasi</p>
+          <p class="text-xs text-slate-600 mt-1">Paket fleksibel sesuai kebutuhan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program List -->
+  <section id="daftar-program" class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Daftar Program</h2>
+        <p class="mt-2 text-slate-600">Semua layanan di bawah ini <strong>selain</strong> kategori Excel maupun Data Analyst/IT.</p>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Les Privat SD -->
+        <div class="reveal rounded-2xl border border-slate-200 p-5 hover:border-brand-blue transition">
+          <div class="h-10 w-10 rounded-xl bg-brand-blue/10 grid place-items-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </div>
+          <h3 class="font-bold text-slate-900">Les Privat SD</h3>
+          <p class="mt-1 text-sm text-slate-600">Numerasi dasar, literasi, sains dasar dengan aktivitas berbasis game.</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="text-xs rounded-full bg-sky-50 text-sky-700 px-2 py-1 border border-sky-200">60–90 menit</span>
+            <span class="text-xs rounded-full bg-sky-50 text-sky-700 px-2 py-1 border border-sky-200">Online/Offline</span>
+          </div>
+          <a href="https://wa.me/081328013105?text=Saya%20minat%20Les%20Privat%20SD" class="mt-4 inline-block rounded-xl bg-brand-blue px-4 py-2 text-white text-sm font-semibold hover:bg-sky-500 transition">Tanya Jadwal</a>
+        </div>
+
+        <!-- Les Privat SMP -->
+        <div class="reveal rounded-2xl border border-slate-200 p-5 hover:border-brand-blue transition">
+          <div class="h-10 w-10 rounded-xl bg-brand-blue/10 grid place-items-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h2m12 0h2M12 4v2m0 12v2"/></svg>
+          </div>
+          <h3 class="font-bold text-slate-900">Les Privat SMP</h3>
+          <p class="mt-1 text-sm text-slate-600">Penguatan konsep, latihan terarah MOTS–HOTS, simulasi ASPD.</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="text-xs rounded-full bg-sky-50 text-sky-700 px-2 py-1 border border-sky-200">60–90 menit</span>
+            <span class="text-xs rounded-full bg-sky-50 text-sky-700 px-2 py-1 border border-sky-200">Progress report</span>
+          </div>
+          <a href="https://wa.me/081328013105?text=Saya%20minat%20Les%20Privat%20SMP" class="mt-4 inline-block rounded-xl bg-brand-blue px-4 py-2 text-white text-sm font-semibold hover:bg-sky-500 transition">Tanya Jadwal</a>
+        </div>
+
+        <!-- Les Privat SMA -->
+        <div class="reveal rounded-2xl border border-slate-200 p-5 hover:border-brand-blue transition">
+          <div class="h-10 w-10 rounded-xl bg-brand-blue/10 grid place-items-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 8h6M9 12h6M9 16h6M4 6h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6z"/></svg>
+          </div>
+          <h3 class="font-bold text-slate-900">Les Privat SMA</h3>
+          <p class="mt-1 text-sm text-slate-600">Matematika Wajib/Peminatan, Fisika dasar, Kimia dasar sesuai target sekolah.</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="text-xs rounded-full bg-sky-50 text-sky-700 px-2 py-1 border border-sky-200">Target rapor/ujian</span>
+            <span class="text-xs rounded-full bg-sky-50 text-sky-700 px-2 py-1 border border-sky-200">Offline/Online</span>
+          </div>
+          <a href="https://wa.me/081328013105?text=Saya%20minat%20Les%20Privat%20SMA" class="mt-4 inline-block rounded-xl bg-brand-blue px-4 py-2 text-white text-sm font-semibold hover:bg-sky-500 transition">Tanya Jadwal</a>
+        </div>
+
+        <!-- Persiapan ASPD -->
+        <div class="reveal rounded-2xl border border-slate-200 p-5 hover:border-brand-blue transition">
+          <div class="h-10 w-10 rounded-xl bg-brand-blue/10 grid place-items-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6l-8 4 8 4 8-4-8-4zM4 14l8 4 8-4"/></svg>
+          </div>
+          <h3 class="font-bold text-slate-900">Kelas Persiapan ASPD</h3>
+          <p class="mt-1 text-sm text-slate-600">Drilling soal tipe terbaru, strategi manajemen waktu, review kesalahan.</p>
+          <a href="https://wa.me/081328013105?text=Minat%20Kelas%20Persiapan%20ASPD" class="mt-4 inline-block rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold hover:bg-slate-100 transition">Konsultasi Gratis</a>
+        </div>
+
+        <!-- Persiapan UTBK -->
+        <div class="reveal rounded-2xl border border-slate-200 p-5 hover:border-brand-blue transition">
+          <div class="h-10 w-10 rounded-xl bg-brand-blue/10 grid place-items-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <h3 class="font-bold text-slate-900">Kelas Persiapan UTBK</h3>
+          <p class="mt-1 text-sm text-slate-600">TPS Numerasi, Penalaran Umum, Literasi: konsep → latihan → evaluasi.</p>
+          <a href="https://wa.me/081328013105?text=Minat%20Kelas%20Persiapan%20UTBK" class="mt-4 inline-block rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold hover:bg-slate-100 transition">Konsultasi Gratis</a>
+        </div>
+
+        <!-- Literasi & Numerasi -->
+        <div class="reveal rounded-2xl border border-slate-200 p-5 hover:border-brand-blue transition">
+          <div class="h-10 w-10 rounded-xl bg-brand-blue/10 grid place-items-center mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5zM12 12l9-5-9-5-9 5 9 5z"/></svg>
+          </div>
+          <h3 class="font-bold text-slate-900">Literasi & Numerasi</h3>
+          <p class="mt-1 text-sm text-slate-600">Pemahaman bacaan, tabel/grafik, interpretasi data—buat semua jenjang.</p>
+          <a href="https://wa.me/081328013105?text=Minat%20Kelas%20Literasi%20%26%20Numerasi" class="mt-4 inline-block rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold hover:bg-slate-100 transition">Konsultasi Gratis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paket & Harga Ringkas (anchor ke halaman price detail jika perlu) -->
+  <section class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Paket & Harga Ringkas</h2>
+        <p class="mt-2 text-slate-600">Butuh detail lengkap versi tabel? Cek halaman <a class="text-brand-blue underline underline-offset-4" href="les privat ar education.html" target="_blank" rel="noopener">price list</a>.</p>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <!-- Paket 1 -->
+        <div class="reveal rounded-2xl border border-slate-200 p-6 text-center">
+          <p class="text-xs font-medium text-sky-700">Starter • 60 menit</p>
+          <h3 class="text-xl font-extrabold mt-1" style="color:#0ea5e9;">4x / bulan</h3>
+          <p class="text-slate-600 mt-2 text-sm">Fokus konsep inti & PR guidance.</p>
+          <a href="https://wa.me/081328013105?text=Minat%20Paket%20Starter%204x%20(60%20menit)" class="mt-4 inline-block rounded-xl bg-brand-blue px-5 py-2.5 text-white font-semibold hover:bg-sky-500 transition">Ambil Paket</a>
+        </div>
+        <!-- Paket 2 -->
+        <div class="reveal rounded-2xl border border-slate-200 p-6 text-center">
+          <p class="text-xs font-medium text-sky-700">Standard • 90 menit</p>
+          <h3 class="text-xl font-extrabold mt-1" style="color:#0ea5e9;">8x / bulan</h3>
+          <p class="text-slate-600 mt-2 text-sm">Latihan MOTS–HOTS + evaluasi berkala.</p>
+          <a href="https://wa.me/081328013105?text=Minat%20Paket%20Standard%208x%20(90%20menit)" class="mt-4 inline-block rounded-xl bg-brand-blue px-5 py-2.5 text-white font-semibold hover:bg-sky-500 transition">Ambil Paket</a>
+        </div>
+        <!-- Paket 3 -->
+        <div class="reveal rounded-2xl border border-slate-200 p-6 text-center">
+          <p class="text-xs font-medium text-sky-700">Intensif Ujian</p>
+          <h3 class="text-xl font-extrabold mt-1" style="color:#0ea5e9;">12–20x / bulan</h3>
+          <p class="text-slate-600 mt-2 text-sm">Drilling soal, strategi ujian, simulasi.</p>
+          <a href="https://wa.me/081328013105?text=Minat%20Paket%20Intensif%20Ujian" class="mt-4 inline-block rounded-xl bg-brand-blue px-5 py-2.5 text-white font-semibold hover:bg-sky-500 transition">Ambil Paket</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (Accordion) -->
+  <section class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">FAQ</h2>
+        <p class="mt-2 text-slate-600">Jawaban singkat, langsung ke inti.</p>
+      </div>
+
+      <div class="mt-6 grid lg:grid-cols-2 gap-4">
+        <!-- Item -->
+        <details class="reveal group rounded-2xl border border-slate-200 p-4 open:border-brand-blue transition">
+          <summary class="cursor-pointer font-semibold text-slate-900 flex items-center justify-between">
+            Apakah bisa online & offline?
+            <span class="ml-3 text-slate-400 group-open:rotate-180 transition">
+              ▼
+            </span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">Bisa. Online via Zoom/Gmeet; offline area Jogja (by arrangement).</p>
+        </details>
+
+        <details class="reveal group rounded-2xl border border-slate-200 p-4 open:border-brand-blue transition">
+          <summary class="cursor-pointer font-semibold text-slate-900 flex items-center justify-between">
+            Durasi kelas & frekuensi?
+            <span class="ml-3 text-slate-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">Umumnya 60–90 menit/sesi. Rekomendasi 4–8 sesi/bulan; intensif jelang ujian 12–20 sesi.</p>
+        </details>
+
+        <details class="reveal group rounded-2xl border border-slate-200 p-4 open:border-brand-blue transition">
+          <summary class="cursor-pointer font-semibold text-slate-900 flex items-center justify-between">
+            Materi mengikuti kurikulum?
+            <span class="ml-3 text-slate-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">Ya. Disesuaikan target sekolah, plus latihan tipe soal ujian terkini.</p>
+        </details>
+
+        <details class="reveal group rounded-2xl border border-slate-200 p-4 open:border-brand-blue transition">
+          <summary class="cursor-pointer font-semibold text-slate-900 flex items-center justify-between">
+            Apakah ada report progres?
+            <span class="ml-3 text-slate-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">Ada. Ringkas & objektif (konsep dikuasai, kesalahan dominan, next action).</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Besar -->
+  <section class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal rounded-3xl bg-gradient-to-r from-sky-50 to-white border border-sky-100 p-6 sm:p-8 lg:p-10">
+        <div class="grid lg:grid-cols-3 gap-6 items-center">
+          <div class="lg:col-span-2">
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Siap mulai dari kebutuhan paling mendesak?</h2>
+            <p class="mt-2 text-slate-600">Les Privat • ASPD • UTBK • Literasi-Numerasi — tinggal chat, kita susun jadwal.</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://wa.me/081328013105?text=Halo%20AR%20Education%2C%20saya%20ingin%20konsultasi%20Produk%20Reguler" class="rounded-xl bg-brand-blue px-5 py-3 text-white font-semibold hover:bg-sky-500 transition">Chat WhatsApp</a>
+            <a href="Tentang.html" class="rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-slate-100 transition">Kenal AR Education</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <div class="text-lg font-extrabold" style="color:#0ea5e9;">AR Education</div>
+          <p class="mt-2 text-sm text-slate-600">Belajar yang relevan, hasil nyata. Founder: <span class="font-medium">Riki Dian Pratama</span>.</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-slate-900">Menu</p>
+          <ul class="mt-2 space-y-2 text-sm">
+            <li><a class="hover:text-brand-blue" href="Tentang.html">Tentang</a></li>
+            <li><a class="hover:text-brand-blue" href="produk excel.html">Produk Excel</a></li>
+            <li><a class="hover:text-brand-blue" href="produk data analyst/IT.html">Produk Data Analyst/IT</a></li>
+            <li><a class="hover:text-brand-blue" href="produk reguler.html">Produk Reguler</a></li>
+            <li><a class="hover:text-brand-blue" href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-slate-900">Lokasi</p>
+          <p class="mt-2 text-sm text-slate-600">
+            Gg. Lesmana, Mantrijeron,<br/>Yogyakarta 55143
+          </p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-slate-900">Catatan</p>
+          <p class="mt-2 text-sm text-slate-600">Desain responsif & siap diintegrasikan ke WebApp Apps Script.</p>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-slate-200 pt-6 text-xs text-slate-500">
+        © <span id="year"></span> AR Education. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA (mobile-first) -->
+  <a href="https://wa.me/081328013105?text=Halo%20AR%20Education%2C%20saya%20minat%20Produk%20Reguler"
+     class="fixed bottom-5 right-5 inline-flex items-center gap-2 rounded-full bg-brand-blue text-white px-4 py-3 shadow-lg hover:bg-sky-500 transition"
+     aria-label="Chat WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 5h2l3 7-1 4a2 2 0 0 0 2 2h7m-3-4h6m-6 0l-3-7m9 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+    Chat
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Reveal on scroll
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Typing effect (match index)
+    const words = ["terukur", "nyata", "konsisten", "siap ujian"];
+    const el = document.getElementById('typing');
+    let w = 0, i = 0, deleting = false;
+    function typeLoop(){
+      const word = words[w];
+      if(!deleting){
+        el.textContent = word.slice(0, i++);
+        if(i > word.length){ deleting = true; setTimeout(typeLoop, 1200); return; }
+      } else {
+        el.textContent = word.slice(0, i--);
+        if(i < 0){ deleting = false; w = (w + 1) % words.length; }
+      }
+      setTimeout(typeLoop, deleting ? 36 : 56);
+    }
+    typeLoop();
+  </script>
+</body>
+</html>

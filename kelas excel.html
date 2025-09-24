@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelas Excel — AR Education (Basic • Intermediate • Advance)</title>
+  <meta name="description" content="Kelas Excel AR Education: Basic, Intermediate, sampai Advance. Materi praktis untuk kerja & bisnis. Jadwal fleksibel, online/offline. Pricelist mengikuti skema hemat 3%/7%/10%." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="Kelas Excel — AR Education" />
+  <meta property="og:description" content="Kursus Excel terstruktur: Basic • Intermediate • Advance. Online/offline. Jadwal fleksibel. CTA WhatsApp." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: { blue: '#0ea5e9' }}}}}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='24' fill='%230ea5e9'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='56' font-family='Arial' fill='white'%3EAR%3C/text%3E%3C/svg%3E"/>
+
+  <!-- Schema.org Course -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"Kelas Excel (Basic • Intermediate • Advance)",
+    "provider":{"@type":"Organization","name":"AR Education"},
+    "hasCourseInstance":[
+      {"@type":"CourseInstance","name":"Excel Basic","courseMode":"online/offline"},
+      {"@type":"CourseInstance","name":"Excel Intermediate","courseMode":"online/offline"},
+      {"@type":"CourseInstance","name":"Excel Advance","courseMode":"online/offline"}
+    ],
+    "areaServed":"Yogyakarta & Online"
+  }
+  </script>
+
+  <style>
+    .caret::after{content:"|";margin-left:2px;animation:blink 1s step-start infinite}
+    @keyframes blink{50%{opacity:0}}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.show{opacity:1;transform:translateY(0)}
+    .shadow-soft{box-shadow:0 6px 24px rgba(2,132,199,.08)}
+    .card{transition:transform .25s ease, box-shadow .25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(2,132,199,.12)}
+    .tag{background:linear-gradient(180deg,#fff,#f0f9ff)}
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-brand-blue/20 selection:text-slate-900">
+
+  <!-- Header (match index) -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="AR Education">
+          <div class="h-9 w-9 rounded-xl bg-brand-blue/10 grid place-items-center">
+            <span class="text-brand-blue font-bold">AR</span>
+          </div>
+          <div class="leading-tight">
+            <div class="text-lg font-extrabold tracking-tight" style="color:#0ea5e9;">AR Education</div>
+            <div class="text-xs text-slate-500">by Riki Dian Pratama</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="Tentang.html" class="hover:text-brand-blue">Tentang</a>
+          <a href="produk excel.html" class="text-brand-blue font-semibold">Produk Excel</a>
+          <a href="produk data analyst/IT.html" class="hover:text-brand-blue">Produk Data Analyst/IT</a>
+          <a href="produk reguler.html" class="hover:text-brand-blue">Produk Reguler</a>
+          <a href="kontak.html" class="inline-flex items-center gap-2 rounded-full bg-brand-blue px-4 py-2 text-white hover:bg-sky-500 transition">
+            Kontak
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M21 12H3"/></svg>
+          </a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl p-2 text-slate-700 hover:bg-slate-100" aria-label="Buka menu">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path id="menuBars" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 grid gap-2 text-sm">
+        <a href="Tentang.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Tentang</a>
+        <a href="produk excel.html" class="py-2 px-3 rounded-lg bg-brand-blue/10 text-sky-700">Produk Excel</a>
+        <a href="produk data analyst/IT.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Produk Data Analyst/IT</a>
+        <a href="produk reguler.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Produk Reguler</a>
+        <a href="kontak.html" class="py-2 px-3 rounded-lg bg-brand-blue text-white hover:bg-sky-500 rounded-xl">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-sky-50 to-white pointer-events-none"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+      <div class="grid lg:grid-cols-2 items-center gap-10">
+        <div class="reveal">
+          <span class="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">
+            Kursus Excel • Basic • Intermediate • Advance
+          </span>
+          <h1 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+            Naik level Excel yang <span class="text-brand-blue">praktis</span>, <span class="text-brand-blue">relevan</span>, dan
+            <span class="caret"><span id="typing" class="text-brand-blue"></span></span>
+          </h1>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+            Fokus ke skill yang kepakai di kerja/bisnis: cleaning data, formula & lookup, dashboard, sampai automasi ringan.
+            Jadwal fleksibel, bisa online/offline.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://wa.me/6281328013105?text=Halo%20AR%20Education%2C%20saya%20minat%20Kelas%20Excel"
+               class="rounded-xl bg-brand-blue px-5 py-3 text-white font-semibold hover:bg-sky-500 transition">Chat WhatsApp</a>
+            <a href="#pricelist" class="rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-slate-100 transition">Lihat Pricelist</a>
+          </div>
+          <p class="mt-3 text-xs text-slate-500">Lokasi offline: Gg. Lesmana, Mantrijeron, Yogyakarta 55143</p>
+        </div>
+
+        <div class="reveal">
+          <div class="relative">
+            <div class="absolute -inset-6 bg-gradient-to-tr from-sky-100 to-white blur-2xl rounded-3xl"></div>
+            <div class="relative rounded-3xl border border-sky-100 bg-white shadow-soft p-5">
+              <ul class="grid sm:grid-cols-2 gap-4 text-sm">
+                <li class="rounded-2xl border border-slate-200 p-4">
+                  <p class="text-xs font-medium text-sky-700">Basic</p>
+                  <p class="mt-1 font-semibold text-slate-900">Fundamental & lookup</p>
+                </li>
+                <li class="rounded-2xl border border-slate-200 p-4">
+                  <p class="text-xs font-medium text-sky-700">Intermediate</p>
+                  <p class="mt-1 font-semibold text-slate-900">Pivot, cleaning, analitik</p>
+                </li>
+                <li class="rounded-2xl border border-slate-200 p-4">
+                  <p class="text-xs font-medium text-sky-700">Advance</p>
+                  <p class="mt-1 font-semibold text-slate-900">Dashboard & automasi</p>
+                </li>
+                <li class="rounded-2xl border border-slate-200 p-4">
+                  <p class="text-xs font-medium text-sky-700">Mode</p>
+                  <p class="mt-1 font-semibold text-slate-900">Online / Offline</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Highlight badges -->
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+        <div class="rounded-2xl border border-slate-200 p-4">
+          <p class="text-sm font-semibold text-slate-900">Hands-on Project</p>
+          <p class="text-xs text-slate-600 mt-1">Studi kasus UMKM & kerja kantoran</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-4">
+          <p class="text-sm font-semibold text-slate-900">Dokumen & Template</p>
+          <p class="text-xs text-slate-600 mt-1">File latihan & contoh siap pakai</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-4">
+          <p class="text-sm font-semibold text-slate-900">Progress Report</p>
+          <p class="text-xs text-slate-600 mt-1">Rangkuman & next action</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-4">
+          <p class="text-sm font-semibold text-slate-900">Jadwal Fleksibel</p>
+          <p class="text-xs text-slate-600 mt-1">60–90 menit, online/offline</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Untuk siapa -->
+  <section class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Cocok untuk siapa?</h2>
+        <ul class="mt-3 grid md:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
+          <li class="rounded-2xl border border-slate-200 p-4">Mahasiswa/pekerja yang butuh upgrade skill cepat</li>
+          <li class="rounded-2xl border border-slate-200 p-4">UMKM: stok, penjualan, dan laporan sederhana</li>
+          <li class="rounded-2xl border border-slate-200 p-4">Guru/tenaga pendidik: nilai, presensi, rekap</li>
+          <li class="rounded-2xl border border-slate-200 p-4">Tim admin/finance: invoice, arus kas, KPI</li>
+          <li class="rounded-2xl border border-slate-200 p-4">Siapa pun yang mau rapi & efisien pakai Excel</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Silabus ringkas -->
+  <section class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Silabus</h2>
+        <div class="mt-6 grid md:grid-cols-3 gap-4 text-sm">
+          <div class="rounded-2xl border border-slate-200 p-5">
+            <p class="text-xs font-medium text-sky-700">Basic</p>
+            <ul class="mt-2 list-disc list-inside text-slate-700 space-y-1">
+              <li>UI Excel, format & data validation</li>
+              <li>Referensi sel, aritmatika, text & date</li>
+              <li>Lookup dasar (XLOOKUP/VLOOKUP)</li>
+              <li>Sort & Filter, tabel terstruktur</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-5">
+            <p class="text-xs font-medium text-sky-700">Intermediate</p>
+            <ul class="mt-2 list-disc list-inside text-slate-700 space-y-1">
+              <li>Cleaning data (TRIM, CLEAN, Power Query ringan*)</li>
+              <li>PivotTable/PivotChart</li>
+              <li>IF, IFS, SWITCH, INDEX–MATCH</li>
+              <li>Conditional formatting tingkat lanjut</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-5">
+            <p class="text-xs font-medium text-sky-700">Advance</p>
+            <ul class="mt-2 list-disc list-inside text-slate-700 space-y-1">
+              <li>Dashboard (desain, chart, slicer)</li>
+              <li>Model data, relasi, formula array</li>
+              <li>Automasi ringan: makro/rekorder</li>
+              <li>Praktik proyek mini (UMKM/office)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricelist (mengikuti file lampiran) -->
+  <section id="pricelist" class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Pricelist Kelas Excel</h2>
+        <p class="mt-2 text-slate-600">Hemat 3% (8x) • 7% (12x) • 10% (20x). Per siswa, online/offline.</p>
+      </div>
+
+      <!-- 60 menit -->
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <article class="reveal card rounded-2xl border border-slate-200 p-5">
+          <h3 class="font-bold text-slate-900">Basic — 60 menit</h3>
+          <p class="text-sm text-slate-600 mt-1">Rp75.000 / sesi</p>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>4x: Rp300.000</li>
+            <li>8x: Rp582.000 <span class="text-green-700 font-semibold">(Hemat 3%)</span></li>
+            <li>12x: Rp837.000 <span class="text-green-700 font-semibold">(Hemat 7%)</span></li>
+            <li>20x: Rp1.350.000 <span class="text-green-700 font-semibold">(Hemat 10%)</span></li>
+          </ul>
+          <a href="https://wa.me/6281328013105?text=Ambil%20Excel%20Basic%2060m"
+             class="mt-4 inline-block rounded-xl bg-brand-blue px-4 py-2 text-white text-sm font-semibold hover:bg-sky-500">Ambil Paket</a>
+        </article>
+
+        <article class="reveal card rounded-2xl border border-slate-200 p-5">
+          <h3 class="font-bold text-slate-900">Intermediate — 60 menit</h3>
+          <p class="text-sm text-slate-600 mt-1">Rp100.000 / sesi</p>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>4x: Rp400.000</li>
+            <li>8x: Rp776.000 <span class="text-green-700 font-semibold">(Hemat 3%)</span></li>
+            <li>12x: Rp1.116.000 <span class="text-green-700 font-semibold">(Hemat 7%)</span></li>
+            <li>20x: Rp1.800.000 <span class="text-green-700 font-semibold">(Hemat 10%)</span></li>
+          </ul>
+          <a href="https://wa.me/6281328013105?text=Ambil%20Excel%20Intermediate%2060m"
+             class="mt-4 inline-block rounded-xl bg-brand-blue px-4 py-2 text-white text-sm font-semibold hover:bg-sky-500">Ambil Paket</a>
+        </article>
+
+        <article class="reveal card rounded-2xl border border-slate-200 p-5">
+          <h3 class="font-bold text-slate-900">Advance — 60 menit</h3>
+          <p class="text-sm text-slate-600 mt-1">Rp150.000 / sesi</p>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>4x: Rp600.000</li>
+            <li>8x: Rp1.164.000 <span class="text-green-700 font-semibold">(Hemat 3%)</span></li>
+            <li>12x: Rp1.674.000 <span class="text-green-700 font-semibold">(Hemat 7%)</span></li>
+            <li>20x: Rp2.700.000 <span class="text-green-700 font-semibold">(Hemat 10%)</span></li>
+          </ul>
+          <a href="https://wa.me/6281328013105?text=Ambil%20Excel%20Advance%2060m"
+             class="mt-4 inline-block rounded-xl bg-brand-blue px-4 py-2 text-white text-sm font-semibold hover:bg-sky-500">Ambil Paket</a>
+        </article>
+      </div>
+
+      <!-- 90 menit -->
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <article class="reveal card rounded-2xl border border-slate-200 p-5">
+          <h3 class="font-bold text-slate-900">Basic — 90 menit</h3>
+          <p class="text-sm text-slate-600 mt-1">Rp93.750 / sesi</p>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>4x: Rp375.000</li>
+            <li>8x: Rp727.500 <span class="text-green-700 font-semibold">(Hemat 3%)</span></li>
+            <li>12x: Rp1.046.250 <span class="text-green-700 font-semibold">(Hemat 7%)</span></li>
+            <li>20x: Rp1.687.500 <span class="text-green-700 font-semibold">(Hemat 10%)</span></li>
+          </ul>
+          <a href="https://wa.me/6281328013105?text=Ambil%20Excel%20Basic%2090m"
+             class="mt-4 inline-block rounded-xl bg-brand-blue px-4 py-2 text-white text-sm font-semibold hover:bg-sky-500">Ambil Paket</a>
+        </article>
+
+        <article class="reveal card rounded-2xl border border-slate-200 p-5">
+          <h3 class="font-bold text-slate-900">Intermediate — 90 menit</h3>
+          <p class="text-sm text-slate-600 mt-1">Rp125.000 / sesi</p>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>4x: Rp500.000</li>
+            <li>8x: Rp970.000 <span class="text-green-700 font-semibold">(Hemat 3%)</span></li>
+            <li>12x: Rp1.395.000 <span class="text-green-700 font-semibold">(Hemat 7%)</span></li>
+            <li>20x: Rp2.250.000 <span class="text-green-700 font-semibold">(Hemat 10%)</span></li>
+          </ul>
+          <a href="https://wa.me/6281328013105?text=Ambil%20Excel%20Intermediate%2090m"
+             class="mt-4 inline-block rounded-xl bg-brand-blue px-4 py-2 text-white text-sm font-semibold hover:bg-sky-500">Ambil Paket</a>
+        </article>
+
+        <article class="reveal card rounded-2xl border border-slate-200 p-5">
+          <h3 class="font-bold text-slate-900">Advance — 90 menit</h3>
+          <p class="text-sm text-slate-600 mt-1">Rp150.000 / sesi</p>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>4x: Rp600.000</li>
+            <li>8x: Rp1.164.000 <span class="text-green-700 font-semibold">(Hemat 3%)</span></li>
+            <li>12x: Rp1.674.000 <span class="text-green-700 font-semibold">(Hemat 7%)</span></li>
+            <li>20x: Rp2.700.000 <span class="text-green-700 font-semibold">(Hemat 10%)</span></li>
+          </ul>
+          <a href="https://wa.me/6281328013105?text=Ambil%20Excel%20Advance%2090m"
+             class="mt-4 inline-block rounded-xl bg-brand-blue px-4 py-2 text-white text-sm font-semibold hover:bg-sky-500">Ambil Paket</a>
+        </article>
+      </div>
+
+      <div class="reveal mt-4 flex flex-wrap gap-2 text-xs text-slate-600">
+        <span class="px-2 py-1 rounded-full border border-slate-200 tag">Hemat 3% = paket 8x</span>
+        <span class="px-2 py-1 rounded-full border border-slate-200 tag">Hemat 7% = paket 12x</span>
+        <span class="px-2 py-1 rounded-full border border-slate-200 tag">Hemat 10% = paket 20x</span>
+        <span class="px-2 py-1 rounded-full border border-slate-200 tag">*Per siswa. Kelas kelompok bisa nego.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metode belajar & requirements -->
+  <section class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-6">
+        <div class="reveal rounded-2xl border border-slate-200 p-6">
+          <h3 class="text-lg font-extrabold text-slate-900">Metode Belajar</h3>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2 list-disc list-inside">
+            <li>Latihan step-by-step + studi kasus</li>
+            <li>Sesi tanya-jawab & debugging bareng</li>
+            <li>PR opsional + feedback singkat</li>
+            <li>Progress report & rekomendasi materi lanjut</li>
+          </ul>
+        </div>
+        <div class="reveal rounded-2xl border border-slate-200 p-6">
+          <h3 class="text-lg font-extrabold text-slate-900">Kebutuhan Teknis</h3>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2 list-disc list-inside">
+            <li>Excel versi terbaru / Google Sheets</li>
+            <li>Untuk online: koneksi stabil + headset</li>
+            <li>File latihan akan disediakan</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal mt-6">
+        <a href="https://wa.me/6281328013105?text=Halo%20AR%20Education%2C%20mau%20konsultasi%20Kelas%20Excel"
+           class="inline-flex rounded-xl bg-brand-blue px-5 py-3 text-white font-semibold hover:bg-sky-500 transition">Konsultasi Gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">FAQ</h2>
+        <p class="mt-2 text-slate-600">Singkat & jelas.</p>
+      </div>
+      <div class="mt-6 grid lg:grid-cols-2 gap-4">
+        <details class="reveal group rounded-2xl border border-slate-200 p-4 open:border-brand-blue transition">
+          <summary class="cursor-pointer font-semibold text-slate-900 flex items-center justify-between">
+            Materi bisa menyesuaikan pekerjaan saya?
+            <span class="ml-3 text-slate-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">Bisa. Bawa contoh file real—kita latihan dari situ.</p>
+        </details>
+        <details class="reveal group rounded-2xl border border-slate-200 p-4 open:border-brand-blue transition">
+          <summary class="cursor-pointer font-semibold text-slate-900 flex items-center justify-between">
+            Ada sertifikat?
+            <span class="ml-3 text-slate-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">Ada e-certificate untuk peserta yang menyelesaikan modul.</p>
+        </details>
+        <details class="reveal group rounded-2xl border border-slate-200 p-4 open:border-brand-blue transition">
+          <summary class="cursor-pointer font-semibold text-slate-900 flex items-center justify-between">
+            Jadwalnya fleksibel?
+            <span class="ml-3 text-slate-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">Iya. Pilih 60/90 menit, 4–20x per bulan, online/offline.</p>
+        </details>
+        <details class="reveal group rounded-2xl border border-slate-200 p-4 open:border-brand-blue transition">
+          <summary class="cursor-pointer font-semibold text-slate-900 flex items-center justify-between">
+            Kelas kelompok bisa?
+            <span class="ml-3 text-slate-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">Bisa, biaya per orang jadi lebih hemat. Tanyakan penawaran.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Besar -->
+  <section class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal rounded-3xl bg-gradient-to-r from-sky-50 to-white border border-sky-100 p-6 sm:p-8 lg:p-10">
+        <div class="grid lg:grid-cols-3 gap-6 items-center">
+          <div class="lg:col-span-2">
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Siap mulai Kelas Excel?</h2>
+            <p class="mt-2 text-slate-600">Ceritakan kebutuhanmu—kita susun paket & jadwal paling efisien.</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://wa.me/6281328013105?text=Halo%20AR%20Education%2C%20saya%20minat%20Kelas%20Excel"
+               class="rounded-xl bg-brand-blue px-5 py-3 text-white font-semibold hover:bg-sky-500 transition">Chat WhatsApp</a>
+            <a href="#pricelist" class="rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-slate-100 transition">Lihat Pricelist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <div class="text-lg font-extrabold" style="color:#0ea5e9;">AR Education</div>
+          <p class="mt-2 text-sm text-slate-600">Belajar & alat kerja yang relevan, hasil nyata. Founder: <span class="font-medium">Riki Dian Pratama</span>.</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-slate-900">Menu</p>
+          <ul class="mt-2 space-y-2 text-sm">
+            <li><a class="hover:text-brand-blue" href="Tentang.html">Tentang</a></li>
+            <li><a class="hover:text-brand-blue" href="produk excel.html">Produk Excel</a></li>
+            <li><a class="hover:text-brand-blue" href="produk data analyst/IT.html">Produk Data Analyst/IT</a></li>
+            <li><a class="hover:text-brand-blue" href="produk reguler.html">Produk Reguler</a></li>
+            <li><a class="hover:text-brand-blue" href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-slate-900">Lokasi</p>
+          <p class="mt-2 text-sm text-slate-600">Gg. Lesmana, Mantrijeron,<br/>Yogyakarta 55143</p>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-slate-200 pt-6 text-xs text-slate-500">
+        © <span id="year"></span> AR Education. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA -->
+  <a href="https://wa.me/6281328013105?text=Halo%20AR%20Education%2C%20minat%20Kelas%20Excel"
+     class="fixed bottom-5 right-5 inline-flex items-center gap-2 rounded-full bg-brand-blue text-white px-4 py-3 shadow-lg hover:bg-sky-500 transition"
+     aria-label="Chat WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 5h2l3 7-1 4a2 2 0 0 0 2 2h7m-3-4h6m-6 0l-3-7m9 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+    Chat
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Tahun footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Mobile nav
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+    // Reveal on scroll
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    // Typing effect
+    const words = ["terpakai", "actionable", "anti ribet"];
+    const el = document.getElementById('typing');
+    let w = 0, i = 0, deleting = false;
+    function typeLoop(){
+      const word = words[w];
+      if(!deleting){
+        el.textContent = word.slice(0, i++);
+        if(i > word.length){ deleting = true; setTimeout(typeLoop, 900); return; }
+      } else {
+        el.textContent = word.slice(0, i--);
+        if(i < 0){ deleting = false; w = (w + 1) % words.length; }
+      }
+      setTimeout(typeLoop, deleting ? 36 : 56);
+    }
+    typeLoop();
+  </script>
+</body>
+</html>

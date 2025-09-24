@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak AR Education — Konsultasi Program & Penawaran</title>
+  <meta name="description" content="Hubungi AR Education untuk konsultasi les privat, kursus Excel, atau automasi Spreadsheet. Fast response via WhatsApp." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="Kontak AR Education" />
+  <meta property="og:description" content="Chat WhatsApp untuk pertanyaan cepat & penawaran." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brand: { blue: '#0ea5e9' }}}}}</script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='24' fill='%230ea5e9'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='56' font-family='Arial' fill='white'%3EAR%3C/text%3E%3C/svg%3E"/>
+
+  <!-- Schema.org ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "name":"Kontak AR Education",
+    "url":"https://example.com/kontak.html",
+    "about":{"@type":"Organization","name":"AR Education"},
+    "contactPoint":[{"@type":"ContactPoint","contactType":"customer support","url":"https://wa.me/6281328013105","availableLanguage":["id"]}]
+  }
+  </script>
+
+  <style>
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.show{opacity:1;transform:translateY(0)}
+    .shadow-soft{box-shadow:0 6px 24px rgba(2,132,199,.08)}
+    .card{transition:transform .25s ease, box-shadow .25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(2,132,199,.12)}
+    input,textarea{outline:none}
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-brand-blue/20 selection:text-slate-900">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3" aria-label="AR Education">
+          <div class="h-9 w-9 rounded-xl bg-brand-blue/10 grid place-items-center">
+            <span class="text-brand-blue font-bold">AR</span>
+          </div>
+          <div class="leading-tight">
+            <div class="text-lg font-extrabold tracking-tight" style="color:#0ea5e9;">AR Education</div>
+            <div class="text-xs text-slate-500">by Riki Dian Pratama</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="Tentang.html" class="hover:text-brand-blue">Tentang</a>
+          <a href="produk excel.html" class="hover:text-brand-blue">Produk Excel</a>
+          <a href="produk data analyst/IT.html" class="hover:text-brand-blue">Produk Data Analyst/IT</a>
+          <a href="produk reguler.html" class="hover:text-brand-blue">Produk Reguler</a>
+          <a href="kelas excel.html" class="hover:text-brand-blue">Kelas Excel</a>
+          <a href="kelas reguler.html" class="hover:text-brand-blue">Kelas Reguler</a>
+          <a href="kontak.html" class="text-white inline-flex items-center gap-2 rounded-full bg-brand-blue px-4 py-2 hover:bg-sky-500 transition">Kontak</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl p-2 text-slate-700 hover:bg-slate-100" aria-label="Buka menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 grid gap-2 text-sm">
+        <a href="Tentang.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Tentang</a>
+        <a href="produk excel.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Produk Excel</a>
+        <a href="produk data analyst/IT.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Produk Data Analyst/IT</a>
+        <a href="produk reguler.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Produk Reguler</a>
+        <a href="kelas excel.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Kelas Excel</a>
+        <a href="kelas reguler.html" class="py-2 px-3 rounded-lg hover:bg-slate-100">Kelas Reguler</a>
+        <a href="kontak.html" class="py-2 px-3 rounded-lg bg-brand-blue text-white hover:bg-sky-500 rounded-xl">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Kontak -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-sky-50 to-white pointer-events-none"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+      <div class="reveal">
+        <span class="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">
+          Hubungi AR Education
+        </span>
+        <h1 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+          Tanyakan <span class="text-brand-blue">program</span> & <span class="text-brand-blue">penawaran</span> terbaik hari ini
+        </h1>
+        <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+          Balasan cepat via WhatsApp. Ceritakan kebutuhanmu—kami sarankan paket paling efisien.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://wa.me/6281328013105?text=Halo%20AR%20Education%2C%20saya%20mau%20tanya%20program"
+             class="rounded-xl bg-brand-blue px-5 py-3 text-white font-semibold hover:bg-sky-500 transition">Chat WhatsApp</a>
+          <a href="#form" class="rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-slate-100 transition">Isi Form Singkat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kartu Kontak & Form -->
+  <section id="form" class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-6">
+        <!-- Kartu kontak -->
+        <div class="reveal rounded-2xl border border-slate-200 p-6">
+          <h2 class="text-lg font-extrabold text-slate-900">Kontak cepat</h2>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2">
+            <li>WhatsApp: <a class="text-brand-blue hover:underline" href="https://wa.me/6281328013105">Hubungi Kami</a></li>
+            <li>Lokasi: Gg. Lesmana, Mantrijeron, Yogyakarta 55143</li>
+            <li>Jam respons: 09.00–20.00 WIB</li>
+          </ul>
+          <a href="https://wa.me/6281328013105?text=Halo%2C%20saya%20mau%20tanya%20program"
+             class="mt-4 inline-flex rounded-xl bg-brand-blue px-4 py-2 text-white text-sm font-semibold hover:bg-sky-500">Chat sekarang</a>
+        </div>
+
+        <!-- Form lead (client-side only) -->
+        <div class="reveal lg:col-span-2 rounded-2xl border border-slate-200 p-6">
+          <h2 class="text-lg font-extrabold text-slate-900">Form singkat (opsional)</h2>
+          <p class="mt-1 text-xs text-slate-500">Form ini tidak menyimpan data ke server. Klik “Kirim via WhatsApp” untuk mengirim isi form ke kami.</p>
+
+          <form class="mt-4 grid sm:grid-cols-2 gap-4" onsubmit="toWA(event)">
+            <div>
+              <label class="block text-xs text-slate-600 mb-1">Nama</label>
+              <input id="nama" type="text" required class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-sky-200">
+            </div>
+            <div>
+              <label class="block text-xs text-slate-600 mb-1">Program</label>
+              <select id="program" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-sky-200">
+                <option>Les Privat (SD–SMA)</option>
+                <option>Kelas Excel (Basic–Advance)</option>
+                <option>Produk Excel (Template/Automasi)</option>
+                <option>Data Analyst/IT</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-xs text-slate-600 mb-1">Kebutuhan singkat</label>
+              <textarea id="pesan" rows="4" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-sky-200" placeholder="Contoh: butuh kelas Excel Intermediate 8x, jadwal malam."></textarea>
+            </div>
+            <div class="sm:col-span-2 flex flex-wrap gap-3">
+              <button class="rounded-xl bg-brand-blue px-5 py-3 text-white font-semibold hover:bg-sky-500 transition" type="submit">Kirim via WhatsApp</button>
+              <a href="https://wa.me/6281328013105" class="rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-slate-100 transition">Chat langsung</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Peta statis (akses ringan) -->
+      <div class="reveal mt-6 rounded-2xl border border-slate-200 p-4">
+        <h3 class="text-sm font-semibold text-slate-900">Area layanan</h3>
+        <p class="text-xs text-slate-600 mt-1">Offline di Yogyakarta & online seluruh Indonesia.</p>
+        <div class="mt-3 h-60 w-full rounded-xl bg-gradient-to-br from-sky-50 to-white grid place-items-center text-slate-400 text-sm">
+          <div class="mt-6 w-full h-72 rounded-xl overflow-hidden shadow-soft">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.0000000000!2d110.3680000000!3d-7.7800000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a578000000000%3A0x0000000000000000!2sGg.%20Lesmana%2C%20Mantrijeron%2C%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1699999999999!5m2!1sid!2sid"
+    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ringkas (trust + SEO) -->
+  <section class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">FAQ</h2>
+      <div class="mt-6 grid lg:grid-cols-2 gap-4">
+        <details class="reveal group rounded-2xl border border-slate-200 p-4 open:border-brand-blue transition">
+          <summary class="cursor-pointer font-semibold text-slate-900 flex items-center justify-between">
+            Bagaimana proses pendaftaran?
+            <span class="ml-3 text-slate-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">Chat kami via WhatsApp, ceritakan target & jadwal. Kami rekomendasikan paket & mulai.</p>
+        </details>
+        <details class="reveal group rounded-2xl border border-slate-200 p-4 open:border-brand-blue transition">
+          <summary class="cursor-pointer font-semibold text-slate-900 flex items-center justify-between">
+            Apakah bisa invoice & kerja sama bisnis?
+            <span class="ml-3 text-slate-400 group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-2 text-sm text-slate-600">Bisa. Kami siapkan invoice & kesepakatan kerja yang jelas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <div class="text-lg font-extrabold" style="color:#0ea5e9;">AR Education</div>
+          <p class="mt-2 text-sm text-slate-600">Hubungi kami untuk saran paket paling efisien.</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-slate-900">Menu</p>
+          <ul class="mt-2 space-y-2 text-sm">
+            <li><a class="hover:text-brand-blue" href="Tentang.html">Tentang</a></li>
+            <li><a class="hover:text-brand-blue" href="produk excel.html">Produk Excel</a></li>
+            <li><a class="hover:text-brand-blue" href="produk data analyst/IT.html">Produk Data Analyst/IT</a></li>
+            <li><a class="hover:text-brand-blue" href="produk reguler.html">Produk Reguler</a></li>
+            <li><a class="hover:text-brand-blue" href="kelas excel.html">Kelas Excel</a></li>
+            <li><a class="hover:text-brand-blue" href="kelas reguler.html">Kelas Reguler</a></li>
+            <li><a class="hover:text-brand-blue" href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-slate-900">Lokasi</p>
+          <p class="mt-2 text-sm text-slate-600">Gg. Lesmana, Mantrijeron, Yogyakarta 55143</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-slate-900">WhatsApp</p>
+          <p class="mt-2 text-sm text-slate-600">
+            <a class="text-brand-blue hover:underline" href="https://wa.me/6281328013105">Hubungi Kami</a>
+          </p>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-slate-200 pt-6 text-xs text-slate-500">
+        © <span id="year"></span> AR Education. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA -->
+  <a href="https://wa.me/6281328013105?text=Halo%20AR%20Education%2C%20saya%20mau%20tanya%20program"
+     class="fixed bottom-5 right-5 inline-flex items-center gap-2 rounded-full bg-brand-blue text-white px-4 py-3 shadow-lg hover:bg-sky-500 transition" aria-label="Chat WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 5h2l3 7-1 4a2 2 0 0 0 2 2h7m-3-4h6m-6 0l-3-7m9 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+    Chat
+  </a>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const menuBtn=document.getElementById('menuBtn'); const mobileNav=document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click',()=>mobileNav.classList.toggle('hidden'));
+    const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Kirim isi form ke WA
+    function toWA(e){
+      e.preventDefault();
+      const nama=document.getElementById('nama').value.trim();
+      const program=document.getElementById('program').value;
+      const pesan=document.getElementById('pesan').value.trim();
+      const text=`Halo AR Education, saya ${nama}. Program: ${program}. Kebutuhan: ${pesan}`;
+      const url='https://wa.me/6281328013105?text='+encodeURIComponent(text);
+      window.open(url,'_blank');
+    }
+  </script>
+</body>
+</html>
